@@ -1,0 +1,38 @@
+name: Health Check # angezeigte Name innerhalb der Github - Oberfläche
+
+on:    # on: definiert wann die Pipeline läuft - hier bei jedem push auf den Main Branch
+  push:
+    branches:
+      - main
+    #paths:
+      # - 'name-des-paths'
+
+# -> Es gibt auch andere Möglichkeiten z.B Pull - Requests, oder schedule etc.
+
+
+# Jobs enthält die Aufgaben -> Jeder Job läuft auf einer frischen Maschine 
+# Definition - Ein Job ist eine abgeschlossene Einheit von Arbeit 
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+
+      #checkt den Code aus - ohne diese Zeile lädt kein Code innerhalb der VM
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      #Python wird eingerichtet  - Zur Ausführung des Codes 
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      #Script wird ausgeführt
+
+      - name: Services generieren
+        run: python generator.py
+      
+      
+
+      - name: Health Check ausführen
+        run: python checker.py --strict
