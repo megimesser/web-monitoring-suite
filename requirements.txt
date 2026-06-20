@@ -1,0 +1,16 @@
+beautifulsoup4
+Flask
+google-api-python-client
+google-auth
+google-auth-httplib2
+google-auth-oauthlib
+openpyxl
+pandas
+pytest
+python-dotenv
+requests
+requests-oauthlib
+selenium
+twilio
+webdriver-manager
+yfinance
