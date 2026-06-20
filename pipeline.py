@@ -11,5 +11,5 @@ parser.add_argument(
 args = parser.parse_args()
 
 if args.strict:
-    print("sys.exit(0)")
-    sys.exit(0)
+    print("sys.exit(1)")
+    sys.exit(1)
