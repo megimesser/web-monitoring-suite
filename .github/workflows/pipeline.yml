@@ -29,10 +29,6 @@ jobs:
 
       #Script wird ausgeführt
 
-      - name: Services generieren
-        run: python generator.py
       
-      
-
       - name: Health Check ausführen
-        run: python checker.py --strict
+        run: python pipeline.py --strict
