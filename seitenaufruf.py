@@ -40,15 +40,15 @@ def requester(links):
         response = requests.get(i)
         if response.status_code == 200:
             print(f"✅ Status {response.status_code} — Seite erreichbar")
-            driver = webdriver.Chrome()
-            driver.get(i)
-            titel = driver.title                # titel VORHER speichern
-            print(f"Titel: {titel}")
-            time.sleep(10)
-            driver.quit()                       # jetzt erst beenden
+            #driver = webdriver.Chrome()
+            #driver.get(i)
+            #titel = driver.title                # titel VORHER speichern
+            #print(f"Titel: {titel}")
+            #time.sleep(10)
+            #driver.quit()                       # jetzt erst beenden
             seiten_erreichbar += 1
             message_string += f"✅ Status {response.status_code} — Seite erreichbar\n"
-            message_string += f"Titel: {titel}\n"
+            #message_string += f"Titel: {titel}\n"
         else:
             print(f"❌ Status {response.status_code} — Seitenaufruf fehlgeschlagen")
             message_string += f"❌ Status {response.status_code} — fehlgeschlagen\n"
@@ -62,6 +62,7 @@ def requester(links):
 ### Function callingd ### 
 
 if __name__ == "__main__":
-    message_emptyer(TXT_PATH, message="")
-    ergebnis = requester(HAUPTSEITEN_LINKS)
-    text_writer(TXT_PATH, ergebnis)
+    print(requester(HAUPTSEITEN_LINKS))
+    #message_emptyer(TXT_PATH, message="")
+    #ergebnis = requester(HAUPTSEITEN_LINKS)
+    #text_writer(TXT_PATH, ergebnis)
