@@ -15,6 +15,9 @@ def get_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
+
+    #Nur für Homelablösung
+    options.binary_location = "/usr/bin/chromium-browser"
     return webdriver.Chrome(options=options)
 
 def messe_looper(TEST_MAIL, MESSE_LOOP):
