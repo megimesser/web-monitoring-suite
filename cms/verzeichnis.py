@@ -11,11 +11,10 @@ from sender import sms_sender
 
 def get_driver():
     options = Options()
-    #options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     return webdriver.Chrome(options=options)
-
 
 def zaehle_items(driver):
     x = driver.execute_script(

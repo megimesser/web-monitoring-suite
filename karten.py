@@ -11,12 +11,11 @@ from config import TEST_MAIL, MESSE_LOOP, VORNAME, NACHNAME
 
 def get_driver():
     options = Options()
-    #options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1920,1080")
     return webdriver.Chrome(options=options)
-
-
 
 def messe_looper(TEST_MAIL, MESSE_LOOP):
     for messe in MESSE_LOOP:
@@ -47,7 +46,8 @@ def freikarte(TEST_MAIL, messe):
 
         Select(messe_dropdown).select_by_visible_text(messe)
 
-        checkbox.click()
+        #checkbox.click()
+        driver.execute_script("arguments[0].click();", checkbox)
         time.sleep(1)
         submit.click()
         time.sleep(5)
