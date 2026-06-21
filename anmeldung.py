@@ -16,8 +16,12 @@ def get_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
-    return webdriver.Chrome(options=options)
 
+    chrome_binary = os.environ.get("CHROME_BINARY")
+    if chrome_binary:
+        options.binary_location = chrome_binary
+
+    return webdriver.Chrome(options=options)
 def messe_looper_anmeldung(TEST_MAIL, MESSE_LOOP_A):
     for messe in MESSE_LOOP_A:
         anmeldung(TEST_MAIL, messe)

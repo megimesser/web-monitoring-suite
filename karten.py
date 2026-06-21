@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import os 
 
 from config import TEST_MAIL, MESSE_LOOP, VORNAME, NACHNAME
 
@@ -16,8 +17,10 @@ def get_driver():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
 
-    #Nur für Homelablösung
-    options.binary_location = "/usr/bin/chromium-browser"
+    chrome_binary = os.environ.get("CHROME_BINARY")
+    if chrome_binary:
+        options.binary_location = chrome_binary
+
     return webdriver.Chrome(options=options)
 
 def messe_looper(TEST_MAIL, MESSE_LOOP):
