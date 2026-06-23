@@ -1,9 +1,5 @@
-from selenium import webdriver
-import time
 import requests
-import os 
-from dotenv import load_dotenv
-from config import HAUPTSEITEN_LINKS, UNTERSEITEN_LINKS,UNTERSEITEN_AUSSTELLER,UNTERSEITEN_BESUCHER,TXT_PATH
+from config import HAUPTSEITEN_LINKS
 
 
 

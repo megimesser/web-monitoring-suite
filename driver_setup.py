@@ -1,7 +1,6 @@
 import os 
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from config import CHROME_BINARY
 
 
 

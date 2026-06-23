@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-import os
 from twilio.rest import Client
 import re
 from config import TXT_PATH,AUTH_TOKEN,ACCOUNT_SID,TWILIO_NUMBER,SMS_EMPFAENGER
@@ -26,7 +25,7 @@ def sms_searcher(path):
     x = re.search("fehlgeschlagen", daten)
     print(type(x))
     x = bool(x)
-    if x == True:
+    if x:
         print("gefunden")
         
         sms_sender(nachricht="fehlgeschlagen", empfaenger=SMS_EMPFAENGER)

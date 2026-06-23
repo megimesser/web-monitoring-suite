@@ -2,7 +2,6 @@
 import smtplib
 from email.message import EmailMessage
 from datetime import *
-import os 
 from config import GOOGLE_KEY,TXT_PATH,ACCOUNT,TARGET
 
 

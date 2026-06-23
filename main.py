@@ -1,7 +1,7 @@
 import time
 
 # --- Konfiguration ---
-from config import *  # nur das aufzählen, was du hier wirklich nutzt
+from config import TXT_PATH,HAUPTSEITEN_LINKS,UNTERSEITEN_LINKS,UNTERSEITEN_AUSSTELLER,UNTERSEITEN_BESUCHER,TEST_MAIL,TEST_NUMMER,MESSAGE,MESSE_LOOP,MESSE_LOOP_A,GOOGLE_KEY,ACCOUNT,TARGET  # nur das aufzählen, was du hier wirklich nutzt
 
 # --- Seitenaufrufe ---
 from seitenaufruf import (
@@ -16,15 +16,15 @@ from gmail.filter import get_service, main_reader
 
 # --- Messe-Workflows ---
 from seitennachricht import aussteller, besucher
-from karten import messe_looper, freikarte
-from anmeldung import messe_looper_anmeldung, anmeldung
+from karten import messe_looper
+from anmeldung import messe_looper_anmeldung
 
 # --- Benachrichtigung ---
-from sender import sms_sender, sms_searcher
+from sender import sms_searcher
 
 
 # --- CMS --- 
-from cms.verzeichnis import verzeichnis, zaehle_items,counter_cms
+from cms.verzeichnis import verzeichnis,counter_cms
 
 
 from mailing.nachrichten import sender

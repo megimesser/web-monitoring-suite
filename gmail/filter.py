@@ -94,8 +94,8 @@ def main_reader():
 
         # Prüfung Anmeldedaten + Karten (gleiche Logik, ein Block)
         if re.search(r"^(Ihre|Dein)", subject) and has_relevant_attachment(msg):
-            if helper_2 == True:
-                message_string += f"\n\n⭐ Tickets / Anmeldungen ⭐\n"
+            if helper_2:
+                message_string += "\n\n⭐ Tickets / Anmeldungen ⭐\n"
                 helper_2 = False 
             f = subject.split()
             text = f"{f[1]} {f[-1]} in Ordnung ✅ "
@@ -104,8 +104,8 @@ def main_reader():
 
         # Prüfung Nachrichten
         if re.search(r"Webseite :", subject):
-            if helper_3 == True:
-                message_string += f"\n\n⭐ Aussteller / Besuchernachricht ⭐\n"
+            if helper_3:
+                message_string += "\n\n⭐ Aussteller / Besuchernachricht ⭐\n"
                 helper_3 = False
             text = f"{subject.split()[-1]} wird versendet ✅"
             print(text)
