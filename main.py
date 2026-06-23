@@ -11,7 +11,7 @@ from seitenaufruf import (
 )
 
 # --- Gmail ---
-from gmail.deleter import delete_all, get_service
+from gmail.deleter import delete_all
 from gmail.filter import get_service, main_reader
 
 # --- Messe-Workflows ---
