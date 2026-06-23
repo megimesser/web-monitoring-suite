@@ -1,20 +1,11 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from config import CMS_EINTRÄGE, SMS_EMPFAENGER, TXT_PATH
 from sender import sms_sender
+from driver_setup import get_driver
 
 
-def get_driver():
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    return webdriver.Chrome(options=options)
 
 def zaehle_items(driver):
     x = driver.execute_script(

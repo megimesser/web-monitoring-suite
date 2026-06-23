@@ -39,22 +39,3 @@
 
 ⭐CMS⭐ 
 ✅ 149 / 149 Einträge sind innerhalb des Ausstellerverzeichnisses vorhanden
-
-⭐ Tickets / Anmeldungen ⭐
-Anmeldungsunterlagen Düren in Ordnung ✅  
-Anmeldungsunterlagen Hückelhoven in Ordnung ✅  
-Anmeldungsunterlagen Moers in Ordnung ✅  
-Anmeldungsunterlagen Düsseldorf in Ordnung ✅  
-Anmeldungsunterlagen Kaiserslautern in Ordnung ✅  
-Anmeldungsunterlagen Duisburg in Ordnung ✅  
-Messeticket Hückelhoven in Ordnung ✅  
-Messeticket Düsseldorf in Ordnung ✅  
-Messeticket Düren in Ordnung ✅  
-Messeticket Moers in Ordnung ✅  
-Messeticket Kaiserlautern in Ordnung ✅  
-Messeticket Duisburg in Ordnung ✅  
-
-
-⭐ Aussteller / Besuchernachricht ⭐
-Besuchernachricht wird versendet ✅ 
-Ausstellernachricht wird versendet ✅ 
