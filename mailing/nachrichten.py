@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import smtplib
 from email.message import EmailMessage
-from datetime import *
+from datetime import datetime 
 from config import GOOGLE_KEY,TXT_PATH,ACCOUNT,TARGET
 
 
@@ -21,7 +21,7 @@ def sender(GOOGLE_KEY, ACCOUNT, TARGET):
     GOOGLE_KEY=str(GOOGLE_KEY)
     
 
-    #app - pw unbedingt nach Fertigstellung löschen 
+    
     
 
     msg = EmailMessage()
