@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 TEST_MAIL = "testautomationheinze@gmail.com"
 VORNAME = "Testautomation"
 NACHNAME = "Testautomation"
-MESSE_LOOP = ["Messe Duisburg","Messe Kaiserslautern","Messe Moers", "Messe Düren", "Messe Düsseldorf", "Messe Hückelhoven - (bald erhältlich)"]
+MESSE_LOOP = ["Messe Duisburg","Messe Kaiserslautern","Messe Moers", "Messe Düren", "Messe Düsseldorf", "Messe Hückelhoven"]
 
 
 #Seitenaufruf 
